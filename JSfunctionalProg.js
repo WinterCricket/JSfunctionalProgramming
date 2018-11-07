@@ -5,20 +5,19 @@
 // }
 // var inputHouse = ["Mobile Home", "Small Camp", "Single Family", "Multi-Family"];
 
-var dogs = [
-  {weight: "fat", color: "red"}, 
-  {weight: "thin", color: "blue"}, 
-  {weight: "just right", color: "brown"},
-  {weight: "fat", color: "brown"}
-];
-
-var filterDogs = dogs.filter(function(dog){
-	return dog.color === "brown";
-});
-var newVar = filterDogs.map(function(filtered) {
-	return filtered['weight'];
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+const squareList = (arr) => {
+  "use strict";
+ 
+  const squaredIntegers = arr.filter((num)=> num % parseInt(num) === 0 && num > 0).map(num => Math.pow(num, 2));
   
-});
+ 
+
+  return squaredIntegers;
+};
+//test code
+const squaredIntegers = squareList(realNumberArray)
+console.log(squaredIntegers);
 
 
-//output is    ["just right","fat"]
+
