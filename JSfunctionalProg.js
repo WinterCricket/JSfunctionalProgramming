@@ -5,19 +5,22 @@
 // }
 // var inputHouse = ["Mobile Home", "Small Camp", "Single Family", "Multi-Family"];
 
-const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
-const squareList = (arr) => {
-  "use strict";
- 
-  const squaredIntegers = arr.filter((num)=> num % parseInt(num) === 0 && num > 0).map(num => Math.pow(num, 2));
+rest operation and spread…
+const sum = (function() {
   
- 
+  "use strict";
+  return function sum(...args) {
+    
+    return args.reduce((a, b) => a + b, 0);
+  };
+  
+})();
+  function howMany(...args) {
+  return "You have passed " + args.length + " arguments.";
+}
+console.log(howMany(0, 1, 2));
+console.log(sum(1, 2, 3)); // 6
 
-  return squaredIntegers;
-};
-//test code
-const squaredIntegers = squareList(realNumberArray)
-console.log(squaredIntegers);
 
 
 
