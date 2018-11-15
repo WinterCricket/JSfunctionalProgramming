@@ -8,18 +8,20 @@
 	
 
 	<script>
-		function frankenSplice(arr1, arr2, n) {
-  var secondArg = arr2.slice();
-  for (let i = 0; i < arr1.length; i++){
-   
-  secondArg.splice(n, 0, arr1[i]);
-    n++;
-  }
-  return secondArg;
-  
-}
+		function mutation(arr) {
 
-frankenSplice(['lobster', 'is a Maine fish', 'due to nake women'], ['a', 'b', 'c'], 1);
+let arr1 = arr[0].toLowerCase();
+  let arr2 = arr[1].toLowerCase();
+
+  for (var I = 0; I < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) < 0)
+      return false;
+  }
+  return true;
+ }
+
+
+mutation(["hello", "hey"]);
 
 
 
