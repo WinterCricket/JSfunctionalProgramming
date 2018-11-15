@@ -7,6 +7,44 @@
 <body>
 	
 
-	<script src="JSfunctionalProg.js">console.log(filterDogs);</script>
+	<script>
+		let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function countOnline(obj) {
+  // change code below this line
+var num = 0;
+for (let person in users){
+  
+ if (users[person].online === true) {
+ num++;
+ }
+  
+}
+return num;
+  // change code above this line
+}
+
+Console.log(countOnline(users));
+
+
+
+	</script>
 </body>
 </html>
