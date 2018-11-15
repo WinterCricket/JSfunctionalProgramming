@@ -8,20 +8,24 @@
 	
 
 	<script>
-		function mutation(arr) {
+		function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  let i = 0;
+ 
+  let tempArr = [];
+    
+    for (i = 0; i < arr.length; i += size) {
+       let monkChunk = arr.slice(i, i + size);
+       
+        tempArr.push(monkChunk);
+    }
 
-let arr1 = arr[0].toLowerCase();
-  let arr2 = arr[1].toLowerCase();
+    return tempArr;
 
-  for (var I = 0; I < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) < 0)
-      return false;
-  }
-  return true;
- }
+}
 
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
-mutation(["hello", "hey"]);
 
 
 
