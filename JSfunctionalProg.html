@@ -8,40 +8,19 @@
 	
 
 	<script>
-		let users = {
-  Alan: {
-    age: 27,
-    online: false
-  },
-  Jeff: {
-    age: 32,
-    online: true
-  },
-  Sarah: {
-    age: 48,
-    online: false
-  },
-  Ryan: {
-    age: 19,
-    online: true
+		function frankenSplice(arr1, arr2, n) {
+  var secondArg = arr2.slice();
+  for (let i = 0; i < arr1.length; i++){
+   
+  secondArg.splice(n, 0, arr1[i]);
+    n++;
   }
-};
-
-function countOnline(obj) {
-  // change code below this line
-var num = 0;
-for (let person in users){
-  
- if (users[person].online === true) {
- num++;
- }
+  return secondArg;
   
 }
-return num;
-  // change code above this line
-}
 
-Console.log(countOnline(users));
+frankenSplice(['lobster', 'is a Maine fish', 'due to nake women'], ['a', 'b', 'c'], 1);
+
 
 
 
