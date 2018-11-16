@@ -8,23 +8,23 @@
 	
 
 	<script>
-		function chunkArrayInGroups(arr, size) {
-  // Break it up.
-  let i = 0;
- 
-  let tempArr = [];
-    
-    for (i = 0; i < arr.length; i += size) {
-       let monkChunk = arr.slice(i, i + size);
-       
-        tempArr.push(monkChunk);
-    }
-
-    return tempArr;
-
+		function Animal() {}
+Animal.prototype.eat = function() {
+	return "nom nom nomaday!";
 }
 
-chunkArrayInGroups(["a", "b", "c", "d"], 2);
+function Bird() {}
+Bird.prototype = Object.create(Animal.prototype);
+Bird.prototype.constructor = Bird;
+Bird.prototype.fly = function() {
+	return "I'm soaring away, idiots!";
+}
+
+let parrot = new Bird();
+
+parrot.eat();
+parrot.fly();
+
 
 
 
