@@ -124,11 +124,13 @@
 
 
 
-var rating = watchList.map((movie)=> ({"title":movie["Title"], "rating":movie["imdbRating"]}))
 
 
+var mapList = watchList.map((movie)=> ({"title":movie["Title"],"rating":movie["imdbRating"]}))
+var filteredList = mapList.filter(function(movie){return movie.rating >= 8.0});
 
-console.log(rating);
+
+console.log(filteredList);
 
 
  
