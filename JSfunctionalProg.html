@@ -8,29 +8,22 @@
 	
 
 	<script>
-		let bird = {
-  name: "Donald",
-  numLegs: 2
-};
 
-let plane = {
-  model: "777",
-  numPassengers: 524
-};
+		//dead simple example of functional p, non-mutation...
+		var fixedValue = 4;
 
-let flyMixin = function(obj) {
-  obj.fly = function() {
-    console.log("Flying, wooosh!");
-  }
-};
-
-flyMixin(bird);
-flyMixin(plane);
+function incrementer (fixedValue) {
+ 
+  return fixedValue + 1;
   
-plane.fly();
-bird.fly();
+  
+}
 
-
+var newValue = incrementer(fixedValue); // Should equal 5
+var altVal = incrementer(40);//should equal 41
+fixedValue; // Should print 4
+newValue;
+altVal;
 
 
 
