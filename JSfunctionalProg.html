@@ -7,17 +7,25 @@
 <body>
 	
 
-	<script>
+	<p>Click the button to get the sum of the numbers in the array.</p>
+<button onclick="myFunction()">Try it</button>
 
-		//concatination
-function nonMutatingConcat(original, attach) {
-    
+<p>Output: <span id="demo"></span></p>
+
+<script>
+	function nonMutatingConcat(original, attach) {
+  
   return original.concat(attach);
-  }
+  
+}
 var first = [1, 2, 3];
 var second = [4, 5];
 nonMutatingConcat(first, second);
 
+function myFunction() {
+    document.getElementById("demo").innerHTML = nonMutatingConcat(first, second);
+}
+</script>
 
 
  
