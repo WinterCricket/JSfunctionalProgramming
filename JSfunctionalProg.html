@@ -129,7 +129,8 @@
 // Add your code below this line
 var mapList = watchList.map((movie)=> ({"director":movie["Director"],"rating":movie["imdbRating"]}))
 var filteredList = mapList.filter((movie)=> {return movie.director == "Christopher Nolan"});
-var nolanRates = filteredList.filter((movie)=>{return movie.rating == "imdbRating"});
+var nolanList = filteredList.map((nolan)=> ({"rating":nolan.rating}))
+var ratingList = nolanList.filter((movie)=> {return movie.rating});
 
 var averageRating;
 
