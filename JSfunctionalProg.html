@@ -128,7 +128,8 @@
 
 // Add your code below this line
 var mapList = watchList.map((movie)=> ({"director":movie["Director"],"rating":movie["imdbRating"]}))
-var filteredList = mapList.filter(function(movie){return movie.director == "Christopher Nolan"});
+var filteredList = mapList.filter((movie)=> {return movie.director == "Christopher Nolan"});
+var nolanRates = filteredList.filter((nolan)=>({"rating":nolan["imdbRating"]}));
 
 var averageRating;
 
@@ -136,7 +137,10 @@ var averageRating;
 
 averageRating; 
 
-filteredList
+
+nolanRates
+
+
 </script>
 
 
@@ -144,6 +148,6 @@ filteredList
 
 
 
-	</script>
+	
 </body>
 </html>
