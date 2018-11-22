@@ -126,18 +126,18 @@
                 }
 ];
 
-// Add your code below this line
+
 var mapList = watchList.map((movie)=> ({"director":movie["Director"],"rating":movie["imdbRating"]}))
 var filteredList = mapList.filter((movie)=> {return movie.director == "Christopher Nolan"});
-var nolanList = filteredList.map((nolan)=> ({"rating":nolan.rating}));
-
-
-const valuesOnly = Object.values(nolanList);
-// Add your code above this line
+var nolanList = filteredList.map((nolan)=> parseFloat(nolan.rating));
 
 
 
-valuesOnly.slice(0, nolanList.length)
+
+
+
+console.log(nolanList);
+
 
 
 </script>
