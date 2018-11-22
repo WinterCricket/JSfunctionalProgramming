@@ -134,10 +134,20 @@ var nolanList = filteredList.map((nolan)=> parseFloat(nolan.rating));
 
 
 
+function getSum(total, num) {
+    return total + num;
+}
+function myFunction(item) {
+    return nolanList.reduce(getSum);
+}
+
+// Add your code above this line
 
 
-console.log(nolanList);
+var love = myFunction();
 
+var meanNolanRating = love / nolanList.length;
+console.log(meanNolanRating);
 
 
 </script>
