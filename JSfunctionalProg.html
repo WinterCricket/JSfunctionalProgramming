@@ -17,11 +17,11 @@
 
  function splitify(str) {
 
-  return str.split(/(?:,|-| )+/);
+  return str.split(/[-,. ]/);
   
  
 }
-splitify("Hello World,I-am code");
+splitify("Hello World,I-am code.horg");
 
 
 </script>
