@@ -17,11 +17,11 @@
 
  function splitify(str) {
 
-  return str.split(/[-,. ]/).join(" ");
+  return str.trim().split(/[,.-\s]).join("-").toLowerCase();
   
  
 }
-splitify("Hello World,I-am code.horg");
+splitify(" Hello   World,I-am code.horg");
 
 
 </script>
