@@ -13,13 +13,13 @@
 <p>Output: <span id="demo"></span></p>
 
 <script>
-	function alphabeticalOrder(arr) {
-  // Add your code below this line
-  
-  return arr.sort();
-  // Add your code above this line
+	var arr = ["a", "d", "c", "a", "z", "g"];
+document.getElementById("demo").innerHTML = arr;
+
+function myFunction() {
+    arr.sort();
+    document.getElementById("demo").innerHTML = arr;
 }
-alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
 
 
 </script>
