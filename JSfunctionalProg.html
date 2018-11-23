@@ -15,13 +15,15 @@
 <script>
 	
 
- function splitify(str) {
-
-  return str.trim().split(/[,.-\s]+/ig).join("-").toLowerCase();
+ function checkPositive(arr) {
   
- 
+  return arr.every(function(currentValue){
+  	return currentValue > 0;
+  });
+  
+  
 }
-splitify(" Hello   World,I-am code.horg");
+checkPositive([1, 2, 3,  5]);
 
 
 </script>
