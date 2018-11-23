@@ -15,15 +15,18 @@
 <script>
 	
 
- function checkPositive(arr) {
-  
-  return arr.some(function(currentValue){
-    return currentValue > 0;
-  });
+ function add(x) {
+ 
+  return function(y) {
+    return function(z) {
+      return x + y + z;
+    }
+  }
   
   
 }
-checkPositive([1, 2, 3, -56, 5]);
+add(10)(20)(30);
+
 
 
 </script>
