@@ -17,7 +17,7 @@
 
  function splitify(str) {
 
-  return str.trim().split(/[,.-\s]).join("-").toLowerCase();
+  return str.trim().split(/[,.-\s]+/ig).join("-").toLowerCase();
   
  
 }
